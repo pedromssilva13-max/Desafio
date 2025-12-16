@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: system-ui, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: oklch(95.518% 0.04149 204.058);
+    transition: 0.5s;
+}
+.hero{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #8dc9b5;
+    transition: 0.5s;
+}
+.hero ul{
+    text-align: right;
+    margin: 20px, 10px, 0, 0;
+}
+.hero li{
+    display: inline-block;
+    list-style: none;
+    margin-right: 10px;
+    font-size: clamp(0.8rem, calc(1vw + 0.25rem), 1.2rem);
+}
+a{
+    color: whitesmoke;
+    padding: 8px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover{
+    color: rgba(143, 143, 143, 0.829);
+    opacity: 0.8;
+}
+
+.logo{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+/*.trilho{
+    width: 70px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100px;
+    cursor: pointer;
+    position: relative;
+    float: left;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.trilho .indicador{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(206, 206, 206);
+    transform: scale(.9);
+    border-radius: 50px;
+    position: absolute;
+    transition: 0.5s;
+    left: 0;
+}*/
+.container{
+    background-image: url(../Pasta_imagem/banner3.jpg);
+    background-size: cover;
+    height: 400px;
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.title_m{
+    text-align: center;
+    color: rgb(39, 36, 36);
+    margin-top: 100px;
+
+}
+.title_m h1{
+    display: inline-block;
+    text-align: center;
+    text-transform: capitalize;
+    border-bottom: 2px solid darkred;
+    font-size: clamp(0.6rem, calc(2vw + 1.2rem), 2.5rem);
+}
+.title_m p{
+    color: whitesmoke;
+    max-width: 190px;
+    margin: auto;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: clamp(1rem, calc(1.2vw + 0.7rem), 1.5rem);
+    background-color: rgba(0, 0, 0, 0.6);
+    border-bottom: 2px solid white;
+}
+.bloc{
+    background-color: white;
+    max-width: 800px;
+    min-width: 320px;
+
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 1rem;
+    padding: min(5em, 8% );
+    overflow: auto;
+}
+.card img{
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    max-width: 60%;
+    height: auto;
+}
+.subtitle{
+    margin-left: 80px;
+}
+.card p{
+    font-size: large;
+    line-height: 1.8;
+}
+footer{
+    margin: 10px;
+}
+.end p{
+    background-color: rgba(0, 0, 0, 0.6);
+    max-width: 150px;
+    margin: auto;
+    color: white;
+    text-align: center;
+}
+
+
+/*Tema claro e escuro*/
+/*
+.trilho.dark{
+    background-color: rgb(129, 129, 129);
+}
+.trilho.dark .indicador{
+    background-color: rgb(61, 61, 61);
+    left: 40px;
+}
+body.dark{
+    background-color: #232323;
+}
+body.dark a:hover{
+    background-color: rgba(0, 0, 0, 0.18);
+}
+body.dark .hero{
+    background-color: oklch(48.326% 0.08609 182.997);
+}
+body.dark .bloc{
+    background-color: #bdbdbd;
+}
+body.dark .card p, body.dark .subtitle{
+    color: rgb(53, 53, 53);
+}
+body.dark .end p{
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+}*/
