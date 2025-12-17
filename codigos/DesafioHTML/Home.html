@@ -9,17 +9,38 @@
     </head>
     <body>
         <header class="container">
-            <nav class="hero">
-            <!--Menu hambugue-->
-            <a class="logo" href="#">Projeto</a>
-                <ul>
-                    <li><a href="Home.html">Home</a></li>                    
-                    <li><a href="Hobbies.html">Hobbies</a></li>
-                    <li><a href="Galeria.html">Galeria</a></li>
-                    <li><a href="Contato.html">Contato</a></li>
-                    <!--<div class="trilho" id="trilho">
-                        <div class="indicador"></div>
-                    </div>-->                                         
+            <div class="hero">
+                <p class="logo">Projeto</p>
+            </div>
+            <nav role="navigation" class="menu">
+            <input type="checkbox" id="menuCheckbox" >
+
+            <div id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+                <ul id="blockMenu">
+                <li>
+                    <a href="../DesafioHTML/Home.html">
+                    <label for="menuCheckbox" onclick="this.parentNode.click();">Home</label>
+                    </a>
+                </li>
+                <li>
+                    <a href="../DesafioHTML/Hobbies.html">
+                    <label for="menuCheckbox" onclick="this.parentNode.click();">Hobbies</label>
+                    </a>
+                </li>
+                <li>
+                    <a href="../DesafioHTML/Galeria.html">
+                    <label for="menuCheckbox" onclick="this.parentNode.click();">Galeria</label>
+                    </a>
+                </li>
+                <li>
+                    <a href="../DesafioHTML/Contato.html">
+                    <label for="menuCheckbox" onclick="this.parentNode.click();">Contato</label>
+                    </a>
+                </li>
                 </ul>
             </nav>
             <div class="title_m">

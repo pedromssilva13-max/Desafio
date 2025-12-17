@@ -8,6 +8,39 @@
         <link rel="stylesheet" href="../Arquivo_CSS/Galeria.css">
     </head>
     <body>
+        <header class="container">
+            <nav role="navigation" class="menu">
+            <input type="checkbox" id="menuCheckbox" >
+
+            <div id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+                <ul id="blockMenu">
+                <li>
+                    <a href="../DesafioHTML/Home.html">
+                    <label for="menuCheckbox" onclick="this.parentNode.click();">Home</label>
+                    </a>
+                </li>
+                <li>
+                    <a href="../DesafioHTML/Hobbies.html">
+                    <label for="menuCheckbox" onclick="this.parentNode.click();">Hobbies</label>
+                    </a>
+                </li>
+                <li>
+                    <a href="../DesafioHTML/Galeria.html">
+                    <label for="menuCheckbox" onclick="this.parentNode.click();">Galeria</label>
+                    </a>
+                </li>
+                <li>
+                    <a href="../DesafioHTML/Contato.html">
+                    <label for="menuCheckbox" onclick="this.parentNode.click();">Contato</label>
+                    </a>
+                </li>
+                </ul>
+            </nav>
+        </header>
         <main>
             <article>
                 <div class="cards">
@@ -53,38 +86,7 @@
                 <div class="btn next"><img src="../Pasta_imagem/hobbies_galeria/seta-direita.png"></div>
             </article>
         </main>
-        <header class="container">
-            <div class="hamburguer" id="hamburguer">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <nav role='navigation'>
-                <div id="menuToggle">
-                    <input type="checkbox" id="menuCheckbox">
-
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    
-                    <ul>
-                        <li for="menuCheckbox">
-                            <label><a href="Home.html">Home</a></label>
-                        </li>
-                        <li for="menuCheckbox">
-                            <label><a href="Hobbies.html">Hobbies</a></label>
-                        </li>
-                        <li for="menuCheckbox">
-                            <label><a href="Galeria.html">Galeria</a></label>
-                        </li>
-                        <li for="menuCheckbox">
-                            <label><a href="Contato.html">Contato</a></label>
-                        </li>
-                    </ul>
-                </div>    
-            </nav>
-        </header>
-    <footer>
+        <footer>
             <div class="end">
                 <p>©CopyrightPedroM</p>
             </div>
