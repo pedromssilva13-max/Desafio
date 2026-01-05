@@ -38,27 +38,27 @@
                   <label for="menuCheckbox" onclick="this.parentNode.click();">Contato</label>
                 </a>
               </li>
+
+              <button id="Buttondack"></button>
+
             </ul>
         </nav>
       </header>
       <main>
-        <article>
+        <section>
           <div class="princial">
-            
-              <div class="box text">
-                
-                <h1>Entre em contato</h1>
-                <p>Fique a vontade para entrar em contato comigo. Estou sempre aberto para feedbacks a respeito ao site e como posso melhorar, e para combinarmos um <b>cafézinho online</b> a qualquer momento.</p>
-                <br>
-                <div class="redes">
-                  <h2>Siga-me</h2>                                                                                                                                                                                                                                                                                                                                                                                         
-                  <a href="#"><img width="50px" src="../Pasta_imagem/hobbies_galeria/instagram.png" alt="Siga-me no instagram"></a>
-                  <a href="#"><img width="50px" src="../Pasta_imagem/hobbies_galeria/github.png" alt="Siga-me no Github"></a>
-                  <a href="#"><img width="50px" src="../Pasta_imagem/hobbies_galeria/linkedin.png" alt="Siga-me no Linkedin"></a>
-                </div>
-
+            <div class="box text">
+          
+              <h1>Entre em contato</h1>
+              <p>Fique a vontade para entrar em contato comigo. Estou sempre aberto para feedbacks a respeito ao site e como posso melhorar, e para combinarmos um <b>cafézinho online</b> a qualquer momento.</p>
+              <div class="redes">
+                <h2>Siga-me</h2>                                                                                                                                                                                                                                                                                                                                                                                         
+                <a href="#"><img width="50px" src="../Pasta_imagem/hobbies_galeria/instagram.png" alt="Siga-me no instagram"></a>
+                <a href="#"><img width="50px" src="../Pasta_imagem/hobbies_galeria/github.png" alt="Siga-me no Github"></a>
+                <a href="#"><img width="50px" src="../Pasta_imagem/hobbies_galeria/linkedin.png" alt="Siga-me no Linkedin"></a>
               </div>
-            
+
+              </div>      
               <div class="box formu">
                 <h1>Formulário contato</h1>
                 <!--form action direciona para o local que vai ser redirecionado esse E-mail-->
@@ -67,7 +67,7 @@
                   <input type="text" name="name" placeholder="Digite seu Nome"  id="nome" required>
                   <input type="email" name="e-mail" placeholder="Digite seu e-mail" id="e-mail" required>
                   <!--Caixa de comentario com largura e tamanho-->
-                  <textarea cols="30" rows="10" name="message" placeholder="Digite sua mensagem" id="mensagem" required></textarea>
+                  <textarea cols="30" rows="10" name="message" placeholder="Digite sua mensagem" id="mensagem" style="resize: none" required></textarea>
                   <button type="submit" id="Botao">ENVIAR</button>
                   <!--Essa é a notificação do e-mail que vai ser enviado-->
                   <input type="hidden" name="_subject" value="Novo Contato!">
@@ -76,16 +76,15 @@
                   <!--Esse hidden serve para apois enviar o e-mail as credenciais sejam apagadas-->
                   <input type="hidden" name="_captcha" value="false">
                 </form>
+                <footer>
+                  <div class="end">
+                    <p>©CopyrightPedroM</p>
+                  </div>
+                </footer>
               </div>
-
-            </div>
-          </article>
+          </div>
+        </section>
       </main>
-      <footer>
-        <div class="end">
-          <p>©CopyrightPedroM</p>
-        </div>
-      </footer>
     </body>
-    <script src="../Arquivo_Javascript/contato.js"></script>
+    <script src="../Arquivo_Javascript/teste02.js"></script>
 </html>

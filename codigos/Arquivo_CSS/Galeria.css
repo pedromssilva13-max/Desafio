@@ -6,11 +6,12 @@
 }
 
 body{
-    background-color: oklch(95.518% 0.04149 204.058);
+    background-color: #e0f0ff;
 }
 
 .menu{
     position: fixed;
+    z-index: 1001;
 }
 
 .menu a{
@@ -48,7 +49,7 @@ body{
     width: 35px;
     height: 5px;
     margin-bottom: 5px;
-    background-color: #333;
+    background-color: #000000;
     border-radius: 5px;
     transition: all 0.4s ease;
 }
@@ -74,7 +75,7 @@ body{
     top: 0;
     width: 400px;
     height: 50vh;
-    margin-left: -400px;
+    transform: translateX(-100%);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     padding: 50px;
@@ -84,7 +85,6 @@ body{
     overflow-y: auto;
     list-style-type: none;
     transform-origin: 0% 0%;
-    transform: translate( 0% 100%);
     background-color: #0A1828;
     transition: all 0.4s ease;
 }
@@ -94,23 +94,23 @@ body{
     font-size: 1.5rem;
 }
 
-menu ul li a{
+.menu ul li a{
     color: #ccc;
     text-decoration: none;
 }
 
 .menu #menuCheckbox:checked ~ ul{
-    margin-left: 0;
-    transition: all 0.4s ease;
+    transform: translateX(0%);
+    transition: 0.4s ease;
 }
 
-article{
+section{
     min-height: 100vh;
     width: 100%;
 }
 
-.cards .princial{
-    background:  oklch(70.4% 0.14 182.503);
+.cards .principal{
+    background-color: #243757;
     width: 96%;
     min-width: 290px;
     padding: 20px;
@@ -118,7 +118,7 @@ article{
     margin: 11px;
 }
 
-.cards .princial h1{
+.cards .principal h1{
     font-size: clamp(2rem, calc(1.6vw + 1rem), 3rem);
     overflow-wrap: break-word;
     width: 100%;
@@ -126,19 +126,19 @@ article{
     letter-spacing: 1px;
 }
 
-.cards .princial b{
-    color: rgb(87, 245, 192);
+.cards .principal b{
+    color: #547792;
     margin: 0.5vw;
 }
 
-.cards .princial h2{
+.cards .principal h2{
     font-size: clamp(1.8rem, calc(1.2vw + 1rem), 2.8rem);
     width: 100%;
     margin: auto;
     letter-spacing: 1px;
 }
 
-.cards .princial p{
+.cards .principal p{
     position: relative;
     font-size: clamp(1.4rem, calc(0.8vw + 1rem), 1.9rem);
     text-indent: 20px;
@@ -156,11 +156,12 @@ article{
 .cards .imgs{
     border-radius: 5px;
     margin: 0.5vw;
-    min-width: 70%;
+    width: 100%;
+
 }
 
 .cards .imgs img{
-    width: 100%;
+    width: 97%;
     height: 100%;
     object-fit: cover;
     cursor: pointer;
@@ -179,8 +180,12 @@ article{
     grid-column: span 2;
 }
 
+#modal .btn,
+#modal .btnfechar{
+    position: absolute;
+}
+
 .btnfechar{
-    position: fixed;
     top: 40px;
     right: 150px;
 }
@@ -218,8 +223,8 @@ article{
 }
 
 .btn{
-    position: fixed;
     top: 50%;
+    transform: translateY(-50%);
 }
 
 .btn img{
@@ -246,7 +251,7 @@ article{
     grid-auto-rows: 25vh;
     }
     .btnfechar{
-    position: fixed;
+    position: absolute;
     top: 40px;
     right: 80px;
     }

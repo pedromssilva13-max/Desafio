@@ -16,7 +16,7 @@ body{
 }
 
 .hero p{
-    color: #2c2c2c;
+    color: #858585;
 }
 .menu{
     position: fixed;
@@ -142,6 +142,7 @@ main{
 }
 .img_A{
     background-color: rgb(255, 255, 255);
+    width: 390px;
     border-radius: 0.5em;
     display: inline-block;
     text-align: center;
@@ -151,8 +152,15 @@ main{
     border-top-left-radius: 0.5em;
     border-top-right-radius: 0.5em;
 }
+.img_A p{
+    font-size: 20px;
+    padding: 0 10px 10px 10px;
+    text-align: justify;
+}
  footer{
+    margin-top: 20px;
     margin: 10px;
+    height: 100px;
  }
 .end{
     text-align: center;

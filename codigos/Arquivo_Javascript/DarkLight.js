@@ -1,0 +1,27 @@
+const Buttondack = document.getElementById('Buttondack');
+const themeSystem = localStorage.getItem('themeSystem') || 'light';
+
+/* ===== Funções ===== */
+
+function defineCurrentTheme(theme) {
+    const darkMOD = '<img src="../Pasta_imagem/meia-lua.png" alt="modoescuro">';
+    const lightMOD = '<img src="../Pasta_imagem/sol.png" alt="modolight">';
+    document.documentElement.setAttribute('data-theme', theme);
+    if(theme == 'light'){
+        Buttondack.innerHTML = darkMOD;
+    } else {
+        Buttondack.innerHTML = lightMOD;
+    }
+}
+defineCurrentTheme(themeSystem);
+
+/* ===== Eventos ===== */
+
+//apetar o botão de mudar tema
+Buttondack.addEventListener('click', () => {
+    let OldTheme = localStorage.getItem('themeSystem') || 'light';
+    let NewTheme = OldTheme == 'light' ? 'dark' : 'light';
+    
+    localStorage.setItem('themeSystem', NewTheme);
+    defineCurrentTheme(NewTheme)
+})

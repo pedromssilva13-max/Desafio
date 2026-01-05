@@ -1,65 +1,101 @@
 *{
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
     font-family: system-ui, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+*,
+*::before,
+*::after{
+    transition: background-color 0.5s, color 0.5s, transform 0.4s;
+}
+
+:root{
+    --color-principal: #ffffff;
+    --color-secundario: #e0f0ff;
+    --color-terciario: #243757;
+    --color-quartenario: #0A1828;
+    --color-quintenario: #ccc;
+    --color-senquenario: #777;
+
+    --color-menu: #333;
+    --color-hover-menu: #BFA181;
+    --color-end: #000;   
+}
+
+[data-theme="dark"]{
+    --color-principal: #eeeeee;
+    --color-secundario: #1E1E1E;
+    --color-terciario: #2e3647;
+    --color-quartenario: #0A1828;
+    --color-quintenario: #ccc;
+    --color-senquenario: #777;
+
+    --color-menu: #ccc;
+    --color-hover-menu: #BFA181;
+    --color-end: #fff;
+}
+
 body{
-    background-color: oklch(95.518% 0.04149 204.058);
+    background-color: var(--color-secundario);
 }
 
 .menu{
     position: fixed;
+    z-index: 1000;
 }
 
 .menu a{
     text-decoration: none;
-    color: #ccc;
-    transition: color 0.3s ease;
+    color: var(--color-quintenario);
 }
 
 .menu a:hover{
-    color: #BFA181;
+    color: var(--color-hover-menu);
 }
 
-.menu #menuCheckbox {
-    position: absolute;
-    z-index: 1000;
-    width: 35px;
-    height: 25px;
-    opacity: 0;
-    margin-top: 50px;
-    margin-left: 50px;
+.menu a label{
     cursor: pointer;
 }
 
-.menu #menuToggle {
+.menu #menuCheckbox{
     position: absolute;
-    z-index: 999;
-    /*cada linha vai ter 5px e cada uma tem dois padding com 5px, totalizando 15px em cada linha*/
+    z-index: 1001;
+    width: 35px;
+    height: 25px;
+    opacity: 0;
+    top: 50px;
+    left: 50px;
+    cursor: pointer;
+}
+
+.menu #menuToggle{
+    position: absolute;
+    z-index: 1000;
     width: 35px;
     height: 35px;
-    margin-top: 50px;
-    margin-left: 50px;
+    top: 50px;
+    left: 50px;
 }
+
 .menu #menuToggle span{
     display: block;
     width: 35px;
     height: 5px;
     margin-bottom: 5px;
-    background-color: #333;
+    background-color: var(--color-menu);
     border-radius: 5px;
-    transition: all 0.4s ease;
 }
 
 .menu #menuCheckbox:checked ~ #menuToggle span{
-    background-color: #ccc;
+    background-color: var(--color-senquenario);
 }
+
 .menu #menuCheckbox:checked ~ #menuToggle span:first-child{
     transform: rotate(45deg) translate(7px, 7px);
 }
+
 .menu #menuCheckbox:checked ~ #menuToggle span:nth-child(2){
     opacity: 0;
 }
@@ -71,23 +107,16 @@ body{
 .menu ul{
     position: absolute;
     z-index: 998;
-    left: 0;
     top: 0;
+    left: 0;
     width: 400px;
     height: 50vh;
     margin-left: -400px;
+    padding: 150px 50px 50px;
+    list-style: none;
+    background-color: var(--color-quartenario);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    padding: 50px;
-    padding-top: 150px;
-
-    box-sizing: border-box;
-    overflow-y: auto;
-    list-style-type: none;
-    transform-origin: 0% 0%;
-    transform: translate( 0% 100%);
-    background-color: #0A1828;
-    transition: all 0.4s ease;
 }
 
 .menu ul li{
@@ -95,124 +124,105 @@ body{
     font-size: 1.5rem;
 }
 
-menu ul li a{
-    color: #ccc;
-    text-decoration: none;
+.menu ul li a{
+    color: var(--color-principal);
 }
 
 .menu #menuCheckbox:checked ~ ul{
     margin-left: 0;
-    transition: all 0.4s ease;
 }
 
-article{
+.menu #Buttondack{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--color-principal);
+}
+
+.menu #Buttondack img{
+    position: relative;
+    right: 8px;
+    bottom: 6px;
+    color: var(--color-principal);
+    width: 35px;
+    height: 35px;
+}
+
+section{
     width: 100%;
-    min-height: 100vh;
+    min-height: 95vh;
 }
 
 .princial{
     display: flex;
-    flex-direction: row;
 }
 
 .princial .box{
-    max-width: 100%;
+    width: 100%;
     padding: 10px;
 }
 
 .text{
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-bottom: 10px;
+    margin: 10px 20px;
 }
 
-.text h1{
-    font-size: clamp(1.5rem, calc(2vw + 1.7rem), 2.8rem);
-    background-color:  oklch(70.4% 0.14 182.503);
+.text h1,
+.formu h1{
+    font-size: clamp(1.5rem, 2vw + 1.7rem, 2.8rem);
+    background-color: var(--color-terciario);
     text-align: center;
-
     max-width: 80%;
-    min-width: 400px;
-
+    min-width: 280px;
     margin: auto;
     border-radius: 10px;
-    padding: min(2em, 2%);
+    padding: 2%;
 }
 
 .text p{
-    font-size: clamp(1rem ,calc(1vw + 1.5rem), 1.8rem);
-    background-color:  white;
-
+    font-size: clamp(1rem, 1vw + 1.5rem, 1.8rem);
+    background-color: var(--color-principal);
     width: 85%;
-    margin: auto;
-    min-width: 400px;
-    margin-top: 50px;
+    margin: 50px auto;
+    min-width: 280px;
     border-radius: 10px;
-    padding: min(2em, 2%);
+    padding: 2%;
 }
 
 .text .redes{
-    margin-top: 30px;
-    margin-bottom: 30px;
     width: 85%;
-    margin: auto;
-    justify-content: center;
+    margin-left: 60px;
 }
 
 .text .redes h2{
-    margin-bottom: 5px;
-}
-
-.text .redes a img{
-    margin-left: 5px;
-}
-
-.box{
-    width: 100%;
-    min-width: 50%;
-}
-
-.formu{
-    margin-left: 10px;
-    margin-bottom: 10px;
-}
-
-.formu h1{
-    font-size: clamp(1.5rem, calc(2vw + 1.7rem), 2.8rem);
-    background-color:  oklch(70.4% 0.14 182.503);
-    text-align: center;
-
-    max-width: 80%;
-    min-width: 400px;
-
-    margin: auto;
-    border-radius: 10px;
-    padding: min(2em, 2%);
+    color: var(--color-end);
+    text-align: left;
 }
 
 form{
-    background-color:  oklch(70.4% 0.14 182.503);
-    box-shadow: 0 1px 2px #ccc;
+    background-color: var(--color-terciario);
+    box-shadow: 0 1px 2px var(--color-quintenario);
     display: flex;
     flex-direction: column;
-
     width: 85%;
-    margin: auto;
-
-    gap:10px;
-    margin-top: 50px;
+    margin: 50px auto;
+    gap: 10px;
     padding: 20px;
 }
 
-input, textarea, button{
-    background-color: #f7f7f7;
+input,
+textarea,
+button{
+    background-color: var(--color-principal);
     border: none;
     border-radius: 5px;
-    color: #777;
+    color: var(--color-senquenario);
     font-size: 18px;
-    outline: none;
     padding: 15px;
-    width: 100%;
 }
 
 button{
@@ -220,20 +230,15 @@ button{
     font-weight: bold;
 }
 
-
-
 .end{
     max-width: 150px;
-    text-align: center;
     margin: auto;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
+    text-align: center;
+    color: var(--color-end);
 }
 
-@media screen and (max-width: 950px){
+@media (max-width: 950px){
     .princial{
-        display: flex;
         flex-direction: column;
     }
-
 }
