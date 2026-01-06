@@ -5,8 +5,40 @@
     font-family: system-ui, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+*,
+*::before,
+*::after{
+    transition: background-color 0.5s, color 0.5s, transform 0.4s;
+}
+
+:root{
+    --color-principal: #ffffff;
+    --color-secundario: #e0f0ff;
+    --color-terciario: #243757;
+    --color-quartenario: #0A1828;
+    --color-quintenario: #ccc;
+    --color-senquenario: #777;
+
+    --color-menu: #333;
+    --color-hover-menu: #BFA181;
+    --color-varient: #000;   
+}
+
+[data-theme="dark"]{
+    --color-principal: #eeeeee;
+    --color-secundario: #1E1E1E;
+    --color-terciario: #2e3647;
+    --color-quartenario: #0A1828;
+    --color-quintenario: #ccc;
+    --color-senquenario: #777;
+
+    --color-menu: #ccc;
+    --color-hover-menu: #BFA181;
+    --color-varient: #fff;
+}
+
 body{
-    background-color: #e0f0ff;
+    background-color: var(--color-secundario);
 }
 
 .menu{
@@ -16,12 +48,12 @@ body{
 
 .menu a{
     text-decoration: none;
-    color: #ccc;
+    color: var(--color-quintenario);
     transition: color 0.3s ease;
 }
 
 .menu a:hover{
-    color: #BFA181;
+    color: var(--color-hover-menu);
 }
 
 .menu #menuCheckbox {
@@ -49,13 +81,13 @@ body{
     width: 35px;
     height: 5px;
     margin-bottom: 5px;
-    background-color: #000000;
+    background-color: var(--color-varient);
     border-radius: 5px;
     transition: all 0.4s ease;
 }
 
 .menu #menuCheckbox:checked ~ #menuToggle span{
-    background-color: #ccc;
+    background-color: var(--color-quintenario);
 }
 .menu #menuCheckbox:checked ~ #menuToggle span:first-child{
     transform: rotate(45deg) translate(7px, 7px);
@@ -85,7 +117,7 @@ body{
     overflow-y: auto;
     list-style-type: none;
     transform-origin: 0% 0%;
-    background-color: #0A1828;
+    background-color: var(--color-quartenario);
     transition: all 0.4s ease;
 }
 
@@ -95,7 +127,7 @@ body{
 }
 
 .menu ul li a{
-    color: #ccc;
+    color: var(--color-quintenario);
     text-decoration: none;
 }
 
@@ -104,13 +136,34 @@ body{
     transition: 0.4s ease;
 }
 
+.menu #Buttondack{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--color-principal);
+}
+
+.menu #Buttondack img{
+    margin-top: 2px;
+    text-align: center;
+    color: var(--color-principal);
+    width: 35px;
+    height: 35px;
+}
+
+
 section{
     min-height: 100vh;
     width: 100%;
 }
 
 .cards .principal{
-    background-color: #243757;
+    background-color: var(--color-terciario);
     width: 96%;
     min-width: 290px;
     padding: 20px;
@@ -240,8 +293,7 @@ section{
     max-width: 150px;
     text-align: center;
     margin: auto;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
+    color: var(--color-varient);
 }
 
 @media screen and (max-width: 764px){

@@ -21,7 +21,7 @@
 
     --color-menu: #333;
     --color-hover-menu: #BFA181;
-    --color-end: #000;   
+    --color-variet: #000;   
 }
 
 [data-theme="dark"]{
@@ -34,7 +34,7 @@
 
     --color-menu: #ccc;
     --color-hover-menu: #BFA181;
-    --color-end: #fff;
+    --color-variet: #fff;
 }
 
 body{
@@ -199,13 +199,12 @@ section{
 }
 
 .text .redes h2{
-    color: var(--color-end);
+    color: var(--color-variet);
     text-align: left;
 }
 
 form{
     background-color: var(--color-terciario);
-    box-shadow: 0 1px 2px var(--color-quintenario);
     display: flex;
     flex-direction: column;
     width: 85%;
@@ -234,7 +233,7 @@ button{
     max-width: 150px;
     margin: auto;
     text-align: center;
-    color: var(--color-end);
+    color: var(--color-variet);
 }
 
 @media (max-width: 950px){
